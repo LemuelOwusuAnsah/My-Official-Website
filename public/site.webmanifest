@@ -1,0 +1,23 @@
+{
+    "name": "Lemuel Owusu-Ansah",
+    "short_name": "Lemy",
+    "description": "Web Developer, Founder, STEM Advocate, Author, Music Producer",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#c5a059",
+    "background_color": "#1a1a1a",
+    "icons": [
+        {
+            "src": "/web-app-manifest-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "/web-app-manifest-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
