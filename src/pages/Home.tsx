@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next'
 import Hero from '../components/Hero'
 import RolesRow from '../components/RolesRow'
 import FeaturedStrip from '../components/FeaturedStrip'
@@ -7,7 +6,6 @@ import { AppleMusicIcon, AppleBooksIcon } from '../components/BrandIcons'
 import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function Home() {
-  const { t } = useTranslation()
   usePageMeta({
     title: 'Lemuel Owusu-Ansah — Full-Stack Developer, Author, Founder',
     description: 'Full-stack developer, founder of Lans Multimedia, published author, and music producer from Accra, Ghana.',

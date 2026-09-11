@@ -1,6 +1,7 @@
 import { useAccount, useConnect, useDisconnect, useBalance, useChainId, useEnsName } from 'wagmi'
 import { Wallet, LogOut, Copy, Check, Download } from 'lucide-react'
 import { useState, useEffect } from 'react'
+import { formatUnits } from 'viem'
 import { CHAIN_NAMES } from '../web3/config'
 
 export default function ConnectWallet() {
@@ -71,7 +72,7 @@ export default function ConnectWallet() {
       </button>
       <span className="w-px h-4 bg-line dark:bg-line-dark" />
       <span className="font-mono text-2xs uppercase tracking-[0.08em] text-ink-muted dark:text-ink-muted-dark px-1">
-        {balance ? `${Number(balance.formatted).toFixed(3)} ${balance.symbol}` : '—'}
+        {balance ? `${Number(formatUnits(balance.value, balance.decimals)).toFixed(3)} ${balance.symbol}` : '—'}
       </span>
       <span className="w-px h-4 bg-line dark:bg-line-dark" />
       <button

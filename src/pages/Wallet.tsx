@@ -4,6 +4,7 @@ import {
 } from 'wagmi'
 import { Wallet as WalletIcon, Copy, Check, ExternalLink, AlertCircle } from 'lucide-react'
 import { useState } from 'react'
+import { formatUnits } from 'viem'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { useReveal } from '../hooks/useReveal'
 import { CHAIN_NAMES } from '../web3/config'
@@ -84,7 +85,7 @@ export default function Wallet() {
           <StatCard label={t('wallet_chain_label')} value={CHAIN_NAMES[chainId] ?? `Chain ${chainId}`} />
           <StatCard
             label={t('wallet_balance_label')}
-            value={balance ? `${Number(balance.formatted).toFixed(4)} ${balance.symbol}` : '—'}
+            value={balance ? `${Number(formatUnits(balance.value, balance.decimals)).toFixed(4)} ${balance.symbol}` : '—'}
             mono
           />
           <StatCard label={t('wallet_ens_label')} value={ens ?? t('wallet_ens_none')} />

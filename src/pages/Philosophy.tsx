@@ -4,7 +4,23 @@ import { Compass, Heart, Hammer, Users, Sprout, ArrowRight } from 'lucide-react'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { useReveal } from '../hooks/useReveal'
 
-const principles = [
+type Principle = {
+  number: string
+  titleKey: string
+  bodyKey: string
+  quoteKey?: string
+  imgKey: string
+  img: string
+  imgAlt: string
+  Icon: React.ComponentType<{ size?: number; strokeWidth?: number }>
+  bg: string
+  text: string
+  muted: string
+  ring: string
+  flip: boolean
+}
+
+const principles: Principle[] = [
   {
     number: '01',
     titleKey: 'phil_belief_title',
@@ -103,10 +119,9 @@ export default function Philosophy() {
       </div>
 
       <div className="space-y-8 mb-24">
-        {principles.map((p) => {
-          const { Icon } = p
-          return <PrincipleCard key={p.number} {...p} Icon={Icon} t={t} />
-        })}
+        {principles.map((p) => (
+          <PrincipleCard key={p.number} p={p} />
+        ))}
       </div>
 
       <div ref={closeRef} className="reveal rule pt-12">
@@ -128,63 +143,47 @@ export default function Philosophy() {
   )
 }
 
-function PrincipleCard({
-  number, titleKey, bodyKey, quoteKey, imgKey, img, imgAlt,
-  Icon, bg, text, muted, ring, flip, t,
-}: {
-  number: string
-  titleKey: string
-  bodyKey: string
-  quoteKey?: string
-  imgKey: string
-  img: string
-  imgAlt: string
-  Icon: React.ComponentType<{ size?: number; strokeWidth?: number }>
-  bg: string
-  text: string
-  muted: string
-  ring: string
-  flip: boolean
-  t: (k: string, d?: string) => string
-}) {
+function PrincipleCard({ p }: { p: Principle }) {
+  const { t } = useTranslation()
   const ref = useReveal<HTMLElement>()
+  const { Icon } = p
 
   return (
     <article
       ref={ref}
-      className={`reveal relative overflow-hidden rounded-surface ${bg} ${text} transition-all duration-500 hover:shadow-2xl`}
+      className={`reveal relative overflow-hidden rounded-surface ${p.bg} ${p.text} transition-all duration-500 hover:shadow-2xl`}
     >
-      <div className={`absolute top-0 right-0 w-48 h-48 rounded-full border ${ring} opacity-40 -translate-y-16 translate-x-16`} />
+      <div className={`absolute top-0 right-0 w-48 h-48 rounded-full border ${p.ring} opacity-40 -translate-y-16 translate-x-16`} />
 
-      <div className={`relative z-10 grid md:grid-cols-2 ${flip ? 'md:[direction:rtl]' : ''}`}>
-        <div className={`relative aspect-[16/10] md:aspect-auto md:min-h-[440px] overflow-hidden ${flip ? 'md:[direction:ltr]' : ''}`}>
-          <img src={img} alt={imgAlt} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+      <div className={`relative z-10 grid md:grid-cols-2 ${p.flip ? 'md:[direction:rtl]' : ''}`}>
+        <div className={`relative aspect-[16/10] md:aspect-auto md:min-h-[440px] overflow-hidden ${p.flip ? 'md:[direction:ltr]' : ''}`}>
+          <img src={p.img} alt={p.imgAlt} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
           <div className="absolute bottom-3 right-3 rounded-full px-3 py-1 font-mono text-2xs uppercase tracking-[0.1em] bg-black/50 text-white backdrop-blur-sm">
             {t('phil_img_credit')}
           </div>
         </div>
 
-        <div className={`p-8 md:p-12 lg:p-16 flex flex-col justify-center ${flip ? 'md:[direction:ltr]' : ''}`}>
+        <div className={`p-8 md:p-12 lg:p-16 flex flex-col justify-center ${p.flip ? 'md:[direction:ltr]' : ''}`}>
           <div className="flex items-center gap-3 mb-6">
             <div className="inline-flex items-center justify-center w-11 h-11 rounded-button bg-white/30 dark:bg-black/20">
               <Icon size={20} strokeWidth={1.75} />
             </div>
-            <span className={`font-mono text-2xs uppercase tracking-[0.14em] ${muted}`}>
-              {number} — {t(imgKey)}
+            <span className={`font-mono text-2xs uppercase tracking-[0.14em] ${p.muted}`}>
+              {p.number} — {t(p.imgKey)}
             </span>
           </div>
 
           <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight leading-[1.05] mb-6">
-            {t(titleKey)}
+            {t(p.titleKey)}
           </h2>
 
-          <p className={`font-sans text-base md:text-lg leading-relaxed mb-6 ${muted}`}>
-            {t(bodyKey)}
+          <p className={`font-sans text-base md:text-lg leading-relaxed mb-6 ${p.muted}`}>
+            {t(p.bodyKey)}
           </p>
 
-          {quoteKey && (
-            <p className={`font-display italic text-base md:text-lg leading-snug pt-4 border-t ${ring}`}>
-              {t(quoteKey)}
+          {p.quoteKey && (
+            <p className={`font-display italic text-base md:text-lg leading-snug pt-4 border-t ${p.ring}`}>
+              {t(p.quoteKey)}
             </p>
           )}
         </div>
