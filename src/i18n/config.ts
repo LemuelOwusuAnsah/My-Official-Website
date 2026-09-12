@@ -1,22 +1,22 @@
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
-import LanguageDetector from 'i18next-browser-languagedetector'
+import i18n from "i18next"
+import { initReactI18next } from "react-i18next"
+import LanguageDetector from "i18next-browser-languagedetector"
 
-import en from '../locales/en.json'
-import fr from '../locales/fr.json'
-import es from '../locales/es.json'
-import de from '../locales/de.json'
-import po from '../locales/po.json'
+import en from "../locales/en.json"
+import fr from "../locales/fr.json"
+import es from "../locales/es.json"
+import de from "../locales/de.json"
+import po from "../locales/po.json"
 
 export const supportedLanguages = [
-  { code: 'en', label: 'English' },
-  { code: 'fr', label: 'Français' },
-  { code: 'es', label: 'Español' },
-  { code: 'de', label: 'Deutsch' },
-  { code: 'po', label: 'Português' },
+  { code: "en", label: "English" },
+  { code: "fr", label: "Français" },
+  { code: "es", label: "Español" },
+  { code: "de", label: "Deutsch" },
+  { code: "po", label: "Português" },
 ] as const
 
-export type SupportedLanguage = (typeof supportedLanguages)[number]['code']
+export type SupportedLanguage = (typeof supportedLanguages)[number]["code"]
 
 i18n
   .use(LanguageDetector)
@@ -29,12 +29,14 @@ i18n
       de: { translation: de },
       po: { translation: po },
     },
-    fallbackLng: 'en',
+    lng: "en",
+    fallbackLng: "en",
     supportedLngs: supportedLanguages.map((l) => l.code),
     interpolation: { escapeValue: false },
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
+      order: ["localStorage"],
+      caches: ["localStorage"],
+      lookupLocalStorage: "lemy-lang",
     },
   })
 
