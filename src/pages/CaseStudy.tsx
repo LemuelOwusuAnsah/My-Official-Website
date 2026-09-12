@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft, ArrowUpRight, ExternalLink } from 'lucide-react'
 import { usePageMeta } from '../hooks/usePageMeta'
@@ -6,7 +5,6 @@ import { useReveal } from '../hooks/useReveal'
 import { getCaseStudy, caseStudies } from '../content/caseStudies'
 
 export default function CaseStudy() {
-  const { t } = useTranslation()
   const { slug } = useParams<{ slug: string }>()
   const cs = slug ? getCaseStudy(slug) : undefined
   const heroRef = useReveal<HTMLDivElement>()

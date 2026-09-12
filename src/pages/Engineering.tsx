@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 import { usePageMeta } from '../hooks/usePageMeta'
@@ -78,7 +77,6 @@ const learning = [
 ]
 
 export default function Engineering() {
-  const { t } = useTranslation()
   usePageMeta({
     title: 'Engineering',
     description: 'How I think about systems — the principles, standards, and craft behind everything I ship.',
