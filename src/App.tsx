@@ -32,7 +32,7 @@ export default function App() {
         <Route path="/now" element={<Now />} />
         <Route path="/legal/privacy" element={<Privacy />} />
         <Route path="/legal/terms" element={<Terms />} />
-        <Route path="/legal/cookies" element={<Cookies />}
+        <Route path="/legal/cookies" element={<Cookies />} />
         <Route path="/work" element={<Work />} />
         <Route path="/work/:slug" element={<CaseStudy />} />
         <Route path="/blog" element={<Blog />} />
