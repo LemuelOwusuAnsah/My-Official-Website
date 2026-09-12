@@ -7,6 +7,8 @@ import Skills from './pages/Skills'
 import About from './pages/About'
 import Work from './pages/Work'
 import CaseStudy from './pages/CaseStudy'
+import Engineering from './pages/Engineering'
+import Now from './pages/Now'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
 import Contact from './pages/Contact'
@@ -23,6 +25,8 @@ export default function App() {
         <Route path="/career" element={<Career />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/about" element={<About />} />
+        <Route path="/engineering" element={<Engineering />} />
+        <Route path="/now" element={<Now />} />
         <Route path="/work" element={<Work />} />
         <Route path="/work/:slug" element={<CaseStudy />} />
         <Route path="/blog" element={<Blog />} />

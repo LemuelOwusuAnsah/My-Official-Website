@@ -70,6 +70,8 @@ export default function Footer() {
               <ul className="space-y-3">
                 {[
                   { to: '/skills', label: t('footer_skills', 'Skills') },
+                  { to: '/engineering', label: t('footer_engineering', 'Engineering') },
+                  { to: '/now', label: t('footer_now', 'Now') },
                   { to: '/work', label: t('footer_work', 'Work') },
                   { to: '/blog', label: t('footer_blog', 'Blog') },
                   { to: '/contact', label: t('nav_contact', 'Contact') },

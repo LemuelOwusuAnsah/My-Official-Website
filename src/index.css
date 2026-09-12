@@ -171,3 +171,71 @@
     transform: translateY(0);
   }
 }
+
+
+@media print {
+  @page { margin: 1.5cm; size: A4; }
+
+  body {
+    background: #ffffff !important;
+    color: #0a0a0a !important;
+    font-size: 11pt;
+  }
+
+  /* Hide interactive chrome */
+  header, footer, nav,
+  [data-print-hide],
+  .btn, .btn-accent, .btn-outline, .btn-primary, .btn-ghost,
+  .kicker-dot,
+  button,
+  .reading-progress {
+    display: none !important;
+  }
+
+  /* Flatten color blocks to border + text for readability */
+  .rounded-surface,
+  article {
+    box-shadow: none !important;
+    border: 1px solid #d4d4d4 !important;
+    background: #ffffff !important;
+    color: #0a0a0a !important;
+    page-break-inside: avoid;
+  }
+
+  /* Force readable text everywhere */
+  * {
+    color: #0a0a0a !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Keep headings strong */
+  h1 { font-size: 24pt !important; }
+  h2 { font-size: 16pt !important; }
+  h3 { font-size: 13pt !important; }
+
+  /* Print links with their URL */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #525252;
+  }
+
+  a[href^="/"]::after,
+  a[href^="#"]::after {
+    content: "";
+  }
+
+  /* Avoid splitting cards across pages */
+  section, article, .grid > * {
+    break-inside: avoid;
+  }
+
+  /* Keep contrast even when the site is in dark mode */
+  html.dark * {
+    color: #0a0a0a !important;
+    background: #ffffff !important;
+  }
+}

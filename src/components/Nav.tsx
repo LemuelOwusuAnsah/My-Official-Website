@@ -12,6 +12,8 @@ const navItems = [
   { to: '/skills', key: 'nav_skills', label: 'Skills' },
   { to: '/about', key: 'nav_about', label: 'About' },
   { to: '/work', key: 'nav_work', label: 'Work' },
+  { to: '/engineering', key: 'nav_engineering', label: 'Engineering' },
+  { to: '/now', key: 'nav_now', label: 'Now' },
   { to: '/blog', key: 'nav_blog', label: 'Blog' },
   { to: '/wallet', key: 'nav_wallet', label: 'Wallet' },
   { to: '/contracts', key: 'nav_contracts', label: 'Contracts' },
