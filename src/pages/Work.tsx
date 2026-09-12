@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { useReveal } from '../hooks/useReveal'
@@ -16,12 +17,12 @@ const books = [
 ]
 
 const projects = [
-  { nameKey: 'proj_wellness_name', descKey: 'proj_wellness_desc', langKey: 'proj_wellness_lang', href: 'https://lemuelowusuansah.github.io/Lans-Wellness-Clinic--Frontend-/', number: '01', bg: 'bg-[#c4b5fd] dark:bg-[#6d28d9]', text: 'text-[#2e1065] dark:text-[#ede9fe]', muted: 'text-[#4c1d95] dark:text-[#ddd6fe]' },
-  { nameKey: 'proj_calendria_name', descKey: 'proj_calendria_desc', langKey: 'proj_calendria_lang', href: 'https://github.com/LemuelOwusuAnsah/Calendria', number: '02', bg: 'bg-[#00c4cc] dark:bg-[#0e7490]', text: 'text-[#083344] dark:text-[#cffafe]', muted: 'text-[#155e75] dark:text-[#a5f3fc]' },
-  { nameKey: 'proj_athletica_name', descKey: 'proj_athletica_desc', langKey: 'proj_athletica_lang', href: 'https://github.com/LemuelOwusuAnsah/Athletica', number: '03', bg: 'bg-[#bef264] dark:bg-[#4d7c0f]', text: 'text-[#1a2e05] dark:text-[#ecfccb]', muted: 'text-[#365314] dark:text-[#d9f99d]' },
-  { nameKey: 'proj_capital_name', descKey: 'proj_capital_desc', langKey: 'proj_capital_lang', href: 'https://github.com/LemuelOwusuAnsah/Capital-Quest', number: '04', bg: 'bg-[#fb923c] dark:bg-[#c2410c]', text: 'text-[#431407] dark:text-[#ffedd5]', muted: 'text-[#7c2d12] dark:text-[#fed7aa]' },
-  { nameKey: 'proj_body_name', descKey: 'proj_body_desc', langKey: 'proj_body_lang', href: 'https://github.com/LemuelOwusuAnsah/Body-Metrics-01', number: '05', bg: 'bg-[#fbbf24] dark:bg-[#b45309]', text: 'text-[#422006] dark:text-[#fef3c7]', muted: 'text-[#78350f] dark:text-[#fde68a]' },
-  { nameKey: 'proj_convertoria_name', descKey: 'proj_convertoria_desc', langKey: 'proj_convertoria_lang', href: 'https://github.com/LemuelOwusuAnsah/Convertoria', number: '06', bg: 'bg-[#a3e635] dark:bg-[#65a30d]', text: 'text-[#1a2e05] dark:text-[#ecfccb]', muted: 'text-[#365314] dark:text-[#d9f99d]' },
+  { nameKey: 'proj_body_name', descKey: 'proj_body_desc', langKey: 'proj_body_lang', href: 'https://lemuelowusuansah.github.io/Body-Metrics-01/', caseStudy: '/work/body-metrics', number: '01', bg: 'bg-[#c4b5fd] dark:bg-[#6d28d9]', text: 'text-[#2e1065] dark:text-[#ede9fe]', muted: 'text-[#4c1d95] dark:text-[#ddd6fe]' },
+  { nameKey: 'proj_capital_name', descKey: 'proj_capital_desc', langKey: 'proj_capital_lang', href: 'https://lemuelowusuansah.github.io/Capital-Quest/', caseStudy: '/work/capital-quest', number: '02', bg: 'bg-[#fb923c] dark:bg-[#c2410c]', text: 'text-[#431407] dark:text-[#ffedd5]', muted: 'text-[#7c2d12] dark:text-[#fed7aa]' },
+  { nameKey: 'proj_wellness_name', descKey: 'proj_wellness_desc', langKey: 'proj_wellness_lang', href: 'https://lemuelowusuansah.github.io/Lans-Wellness-Clinic--Frontend-/', caseStudy: '/work/lans-wellness', number: '03', bg: 'bg-[#bef264] dark:bg-[#4d7c0f]', text: 'text-[#1a2e05] dark:text-[#ecfccb]', muted: 'text-[#365314] dark:text-[#d9f99d]' },
+  { nameKey: 'proj_convertoria_name', descKey: 'proj_convertoria_desc', langKey: 'proj_convertoria_lang', href: 'https://github.com/LemuelOwusuAnsah/Convertoria', number: '04', bg: 'bg-[#fbbf24] dark:bg-[#b45309]', text: 'text-[#422006] dark:text-[#fef3c7]', muted: 'text-[#78350f] dark:text-[#fde68a]' },
+  { nameKey: 'proj_calendria_name', descKey: 'proj_calendria_desc', langKey: 'proj_calendria_lang', href: 'https://github.com/LemuelOwusuAnsah/Calendria', number: '05', bg: 'bg-[#00c4cc] dark:bg-[#0e7490]', text: 'text-[#083344] dark:text-[#cffafe]', muted: 'text-[#155e75] dark:text-[#a5f3fc]' },
+  { nameKey: 'proj_athletica_name', descKey: 'proj_athletica_desc', langKey: 'proj_athletica_lang', href: 'https://github.com/LemuelOwusuAnsah/Athletica', number: '06', bg: 'bg-[#a3e635] dark:bg-[#65a30d]', text: 'text-[#1a2e05] dark:text-[#ecfccb]', muted: 'text-[#365314] dark:text-[#d9f99d]' },
 ]
 
 export default function Work() {
@@ -51,7 +52,7 @@ export default function Work() {
         </a>
         <div className="grid gap-5 sm:grid-cols-2">
           {books.map((book) => (
-            <a key={book.titleKey} href={APPLE_BOOKS_URL} target="_blank" rel="noopener noreferrer" className={`group relative overflow-hidden rounded-surface ${book.bg} ${book.text} p-8 md:p-10 min-h-[240px] flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl will-change-transform`}>
+            <a key={book.titleKey} href={APPLE_BOOKS_URL} target="_blank" rel="noopener noreferrer" className={`group relative overflow-hidden rounded-surface ${book.bg} ${book.text} p-8 md:p-10 min-h-[240px] flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl`}>
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex items-start justify-between mb-8">
                   <span className={`font-mono text-2xs uppercase tracking-[0.14em] ${book.muted}`}>{book.number} — {t(book.tagKey)}</span>
@@ -77,17 +78,30 @@ export default function Work() {
         </a>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((proj) => (
-            <a key={proj.nameKey} href={proj.href} target="_blank" rel="noopener noreferrer" className={`group relative overflow-hidden rounded-surface ${proj.bg} ${proj.text} p-7 min-h-[220px] flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl will-change-transform`}>
+            <div key={proj.nameKey} className={`group relative overflow-hidden rounded-surface ${proj.bg} ${proj.text} p-7 min-h-[240px] flex flex-col transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl`}>
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex items-start justify-between mb-6">
                   <span className={`font-mono text-2xs uppercase tracking-[0.14em] ${proj.muted}`}>{proj.number}</span>
-                  <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <a href={proj.href} target="_blank" rel="noopener noreferrer" aria-label="Open live">
+                    <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  </a>
                 </div>
                 <h3 className="font-display text-2xl font-semibold tracking-tight mb-3">{t(proj.nameKey)}</h3>
                 <p className={`font-sans text-sm leading-relaxed mb-6 ${proj.muted}`}>{t(proj.descKey)}</p>
-                <span className={`mt-auto pt-4 border-t border-current/15 inline-flex items-center gap-2 font-mono text-2xs uppercase tracking-[0.14em] ${proj.muted}`}>{t(proj.langKey)}</span>
+                <div className={`mt-auto pt-4 border-t border-current/15 flex items-center justify-between gap-3 font-mono text-2xs uppercase tracking-[0.14em] ${proj.muted}`}>
+                  <span className="truncate">{t(proj.langKey)}</span>
+                  {proj.caseStudy ? (
+                    <Link to={proj.caseStudy} className="inline-flex items-center gap-1.5 hover:gap-2.5 transition-all flex-shrink-0">
+                      Case study <ArrowUpRight size={10} />
+                    </Link>
+                  ) : (
+                    <a href={proj.href} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 hover:gap-2.5 transition-all flex-shrink-0">
+                      Open <ArrowUpRight size={10} />
+                    </a>
+                  )}
+                </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </section>
