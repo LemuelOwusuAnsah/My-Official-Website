@@ -678,5 +678,9 @@
   "now_not_open_title": "Pas ouvert à",
   "now_not_open_body": "Travail non rémunéré, déploiements mainnet sans audit de sécurité, ou délais précipités.",
   "now_updated": "Dernière mise à jour",
-  "now_cta": "Travailler avec moi"
+  "now_cta": "Travailler avec moi",
+  "contact_email_alt_label": "Email (alt.)",
+  "legal_privacy": "Confidentialité",
+  "legal_terms": "Conditions",
+  "legal_cookies": "Cookies"
 }

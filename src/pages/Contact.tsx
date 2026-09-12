@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
-  Mail, MapPin, Phone, Clock, Send, CheckCircle2, AlertCircle,
+  Mail, MapPin, Phone, Clock, Send, CheckCircle2, AlertCircle, MessageCircle,
   ArrowUpRight, Briefcase,
 } from 'lucide-react'
 import { usePageMeta } from '../hooks/usePageMeta'
@@ -17,18 +17,11 @@ import {
 const FORM_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_ID'
 
 const directRows = [
-  {
-    labelKey: 'contact_email_label',
-    value: 'hello@lemuelowusuansah.org',
-    href: 'mailto:hello@lemuelowusuansah.org',
-    Icon: Mail,
-  },
-  {
-    labelKey: 'contact_phone_label',
-    value: '+233 24 579 1297',
-    href: 'tel:+233245791297',
-    Icon: Phone,
-  },
+  { labelKey: 'contact_email_label', value: 'hello@lemuelowusuansah.org', href: 'mailto:hello@lemuelowusuansah.org', Icon: Mail },
+  { labelKey: 'contact_email_alt_label', value: 'owusuansahlemuel@gmail.com', href: 'mailto:owusuansahlemuel@gmail.com', Icon: Mail },
+  { labelKey: 'contact_phone_1_label', value: '+233 24 579 1297', href: 'tel:+233245791297', Icon: Phone },
+  { labelKey: 'contact_phone_2_label', value: '+233 59 817 6689', href: 'tel:+233598176689', Icon: Phone },
+  { labelKey: 'contact_whatsapp_label', value: 'WhatsApp', href: 'https://wa.me/233245791297', Icon: MessageCircle },
   { labelKey: 'contact_location_label', valueKey: 'contact_location_value', Icon: MapPin },
   { labelKey: 'contact_availability_label', valueKey: 'contact_availability_value', Icon: Briefcase },
   { labelKey: 'contact_response_label', valueKey: 'contact_response_value', Icon: Clock },

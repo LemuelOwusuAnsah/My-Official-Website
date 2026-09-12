@@ -635,5 +635,9 @@
   "now_not_open_title": "Not open to",
   "now_not_open_body": "Unpaid work, mainnet deployments without a security audit, or rushed timelines.",
   "now_updated": "Last updated",
-  "now_cta": "Work with me"
+  "now_cta": "Work with me",
+  "contact_email_alt_label": "Email (alt)",
+  "legal_privacy": "Privacy Policy",
+  "legal_terms": "Terms & Conditions",
+  "legal_cookies": "Cookie Policy"
 }

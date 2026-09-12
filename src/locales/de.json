@@ -677,5 +677,9 @@
   "now_not_open_title": "Nicht offen für",
   "now_not_open_body": "Unbezahlte Arbeit, Mainnet-Deployments ohne Sicherheitsaudit oder überstürzte Zeitpläne.",
   "now_updated": "Zuletzt aktualisiert",
-  "now_cta": "Arbeite mit mir"
+  "now_cta": "Arbeite mit mir",
+  "contact_email_alt_label": "E-Mail (alt.)",
+  "legal_privacy": "Datenschutz",
+  "legal_terms": "AGB",
+  "legal_cookies": "Cookies"
 }

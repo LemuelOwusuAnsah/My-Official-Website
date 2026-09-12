@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lemuel Owusu-Ansah — Blog</title>
+    <link>https://lemuelowusuansah.org/blog</link>
+    <description>Thoughts on building software, running a studio, writing books, and doing all of it from Accra.</description>
+    <language>en</language>
+    <atom:link href="https://lemuelowusuansah.org/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why I moved from design to full-stack</title>
+      <link>https://lemuelowusuansah.org/blog/design-to-fullstack</link>
+      <guid isPermaLink="true">https://lemuelowusuansah.org/blog/design-to-fullstack</guid>
+      <pubDate>Sat, 14 Feb 2026 00:00:00 GMT</pubDate>
+      <description>The honest reason I stopped doing only design work and picked up PHP, MySQL, and server configuration.</description>
+      <enclosure url="https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=1600&q=80&auto=format&fit=crop" type="image/jpeg" />
+    </item>
+    <item>
+      <title>Building AI-assisted workflows that actually ship</title>
+      <link>https://lemuelowusuansah.org/blog/ai-workflows</link>
+      <guid isPermaLink="true">https://lemuelowusuansah.org/blog/ai-workflows</guid>
+      <pubDate>Sun, 08 Mar 2026 00:00:00 GMT</pubDate>
+      <description>Nine AI certificates later, here is what I actually use day to day — and what I have quietly dropped.</description>
+      <enclosure url="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1600&q=80&auto=format&fit=crop" type="image/jpeg" />
+    </item>
+    <item>
+      <title>What Ghana taught me about shipping software</title>
+      <link>https://lemuelowusuansah.org/blog/ghana-software</link>
+      <guid isPermaLink="true">https://lemuelowusuansah.org/blog/ghana-software</guid>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 GMT</pubDate>
+      <description>Constraints do not block good products. They shape them. Notes from four years of building from Accra.</description>
+      <enclosure url="https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=1600&q=80&auto=format&fit=crop" type="image/jpeg" />
+    </item>
+    <item>
+      <title>The LAMP stack is not dead — and Ghana knows it</title>
+      <link>https://lemuelowusuansah.org/blog/lamp-stack-alive</link>
+      <guid isPermaLink="true">https://lemuelowusuansah.org/blog/lamp-stack-alive</guid>
+      <pubDate>Sun, 10 May 2026 00:00:00 GMT</pubDate>
+      <description>A quiet case for the technology everyone loves to dismiss, from someone who ships it every week.</description>
+      <enclosure url="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80&auto=format&fit=crop" type="image/jpeg" />
+    </item>
+    <item>
+      <title>Designing for the one laptop that matters</title>
+      <link>https://lemuelowusuansah.org/blog/one-laptop-matters</link>
+      <guid isPermaLink="true">https://lemuelowusuansah.org/blog/one-laptop-matters</guid>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 GMT</pubDate>
+      <description>What changes when you build for real users instead of benchmarks — bandwidth, old devices, and the discipline it teaches.</description>
+      <enclosure url="https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=1600&q=80&auto=format&fit=crop" type="image/jpeg" />
+    </item>
+    <item>
+      <title>What running a studio taught me about shipping software</title>
+      <link>https://lemuelowusuansah.org/blog/studio-to-software</link>
+      <guid isPermaLink="true">https://lemuelowusuansah.org/blog/studio-to-software</guid>
+      <pubDate>Sat, 18 Jul 2026 00:00:00 GMT</pubDate>
+      <description>Clients, timelines, revisions, and the quiet craft of building things that outlive the meeting they came from.</description>
+      <enclosure url="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1600&q=80&auto=format&fit=crop" type="image/jpeg" />
+    </item>
+  </channel>
+</rss>

@@ -677,5 +677,9 @@
   "now_not_open_title": "No abierto a",
   "now_not_open_body": "Trabajo no remunerado, despliegues mainnet sin auditoría de seguridad, o plazos apresurados.",
   "now_updated": "Última actualización",
-  "now_cta": "Trabaja conmigo"
+  "now_cta": "Trabaja conmigo",
+  "contact_email_alt_label": "Correo (alt.)",
+  "legal_privacy": "Privacidad",
+  "legal_terms": "Términos",
+  "legal_cookies": "Cookies"
 }

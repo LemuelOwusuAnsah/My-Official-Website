@@ -130,9 +130,12 @@ export default function Footer() {
             <p className="font-mono text-2xs uppercase tracking-[0.14em] text-white/40">
               © {year} Lemuel Owusu-Ansah
             </p>
-            <p className="font-mono text-2xs uppercase tracking-[0.14em] text-white/40">
-              Accra · Ghana
-            </p>
+            <div className="flex flex-wrap items-center gap-4">
+            <NavLink to="/legal/privacy" className="font-mono text-2xs uppercase tracking-[0.14em] text-white/40 hover:text-white/80 transition-colors">Privacy</NavLink>
+            <NavLink to="/legal/terms" className="font-mono text-2xs uppercase tracking-[0.14em] text-white/40 hover:text-white/80 transition-colors">Terms</NavLink>
+            <NavLink to="/legal/cookies" className="font-mono text-2xs uppercase tracking-[0.14em] text-white/40 hover:text-white/80 transition-colors">Cookies</NavLink>
+            <span className="font-mono text-2xs uppercase tracking-[0.14em] text-white/40">Accra · Ghana</span>
+          </div>
           </div>
         </div>
       </div>

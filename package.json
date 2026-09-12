@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "prebuild": "node scripts/generate-rss.mjs"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.102.8",
