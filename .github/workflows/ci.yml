@@ -30,6 +30,9 @@ jobs:
 
       - name: ESLint
         run: npm run lint || true
+      - name: Run tests
+        run: npm test
+
 
       - name: Production build
         run: npm run build
