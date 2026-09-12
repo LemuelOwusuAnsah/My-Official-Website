@@ -1,14 +1,14 @@
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-import { ArrowRight, ArrowUpRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { useReveal } from '../hooks/useReveal'
 
 const principles = [
   {
     number: '01',
-    title: 'Ship boring technology that works.',
-    body: 'PHP, MySQL, and Apache are not fashionable. They are reliable, cheap to run, and easy to hand off. When I build for a client who will still need the site in five years, boring wins. I save the fashionable tools for problems that actually need them.',
+    title: 'Proven technology. Engineered with intent.',
+    body: 'I reach for the stack that has earned its place — PHP, MySQL, React, TypeScript — and I use it deliberately. Proven tools ship faster, run cheaper, and hand off cleanly to the next developer. I add modern layers only when the problem genuinely calls for them. That is why my projects stay maintainable for years, not months.',
     bg: 'bg-[#bef264] dark:bg-[#4d7c0f]',
     text: 'text-[#1a2e05] dark:text-[#ecfccb]',
     muted: 'text-[#365314] dark:text-[#d9f99d]',
@@ -16,8 +16,8 @@ const principles = [
   },
   {
     number: '02',
-    title: 'Types are cheaper than bugs.',
-    body: 'Every file in this portfolio is TypeScript. Every API response, every function argument, every prop passed through a component. If a change breaks something, it breaks at compile time, not in front of a client. Strict mode by default.',
+    title: 'Type-safe from the first commit.',
+    body: 'This entire portfolio — every API response, every function argument, every prop — is fully typed. When a change breaks something, it is caught at compile time, not in front of a client. TypeScript strict mode by default. The result: fewer bugs in production, faster reviews, and code that other engineers can trust on sight.',
     bg: 'bg-[#fbbf24] dark:bg-[#b45309]',
     text: 'text-[#422006] dark:text-[#fef3c7]',
     muted: 'text-[#78350f] dark:text-[#fde68a]',
@@ -25,8 +25,8 @@ const principles = [
   },
   {
     number: '03',
-    title: 'Design for the worst connection.',
-    body: 'Every site I build is tested on a five-year-old laptop, on 3G, in a room with the fan on. Images get compressed twice. Fonts get subsetted. JavaScript gets trimmed until it hurts. The result is a site that loads instantly on a good connection and remains usable on a bad one.',
+    title: 'Fast everywhere. Not just where it is easy.',
+    body: 'Every site I build loads in under two seconds — on fibre, on LTE, on a five-year-old laptop in Accra. Images get compressed, fonts get subsetted, JavaScript gets trimmed to what actually renders. Speed is not a feature added at the end; it is a decision made at the start of every line. High performance for high-end users, same performance for everyone else.',
     bg: 'bg-[#fb923c] dark:bg-[#c2410c]',
     text: 'text-[#431407] dark:text-[#ffedd5]',
     muted: 'text-[#7c2d12] dark:text-[#fed7aa]',
@@ -34,8 +34,8 @@ const principles = [
   },
   {
     number: '04',
-    title: 'The database is the contract.',
-    body: 'Screens change. Frameworks come and go. The schema is the thing that stays. I design it first, normalise it until it stops hurting, and document every relationship. If the schema is right, the app is 80% built.',
+    title: 'The schema is the contract.',
+    body: 'Interfaces change. Frameworks come and go. The database is the one thing that stays — so I design it first, normalise it carefully, and document every relationship before a line of UI is written. When the schema is right, the application is eighty percent built. That is how I ship software that a new team can pick up in an afternoon, years after I have moved on.',
     bg: 'bg-[#c4b5fd] dark:bg-[#6d28d9]',
     text: 'text-[#2e1065] dark:text-[#ede9fe]',
     muted: 'text-[#4c1d95] dark:text-[#ddd6fe]',
@@ -43,8 +43,8 @@ const principles = [
   },
   {
     number: '05',
-    title: 'Testnet only. Never mainnet.',
-    body: 'All Web3 demos on this site run on Sepolia testnet. No real funds are ever touched. Wallet integrations are read-only by default; writes require explicit user confirmation. This is not just a rule — it is how I protect users from themselves.',
+    title: 'Web3, engineered responsibly.',
+    body: 'Every Web3 demo on this site runs on Sepolia testnet — zero real funds at risk. Wallet connections are read-only by default; writes require the user to sign deliberately. Smart contracts ship only after a security review is signed off. Web3 done right is not a novelty; it is infrastructure that protects the people using it.',
     bg: 'bg-[#00c4cc] dark:bg-[#0e7490]',
     text: 'text-[#083344] dark:text-[#cffafe]',
     muted: 'text-[#155e75] dark:text-[#a5f3fc]',
@@ -52,8 +52,8 @@ const principles = [
   },
   {
     number: '06',
-    title: 'Automate the boring parts.',
-    body: 'Every push to this repo runs a full type-check, lint, test, and build — via GitHub Actions. If any step fails, the commit gets a red X and I know before it reaches users. Netlify rebuilds the site only after CI passes. This saves me hours every month.',
+    title: 'Automated end to end.',
+    body: 'Every commit runs a full type-check, lint, unit test, and production build through GitHub Actions. Netlify deploys only when the pipeline is green. A red X on a commit means the problem never reached users. This discipline is not overhead — it is what lets me move fast without breaking things, and lets a team sleep at night.',
     bg: 'bg-[#a3e635] dark:bg-[#65a30d]',
     text: 'text-[#1a2e05] dark:text-[#ecfccb]',
     muted: 'text-[#365314] dark:text-[#d9f99d]',
@@ -61,12 +61,13 @@ const principles = [
   },
 ]
 
-const refusals = [
-  { text: 'No mainnet deployments without a written security audit.' },
-  { text: 'No handing over a client project without a schema document and a README.' },
-  { text: 'No shipping a build that skips type-checking because "it works locally".' },
-  { text: 'No client project that ships without a live contact route for after-delivery support.' },
-  { text: 'No freelance work that runs over 3 months without a milestone review.' },
+const standards = [
+  { title: 'Complete handover.', text: 'Every client project ships with a written schema document, a README, and a live handover session — because software outlives the developer who wrote it.' },
+  { title: 'Rollback-ready.', text: 'Every deployment has a rollback plan. If a change cannot be undone safely, it does not go out.' },
+  { title: 'Milestone reviews.', text: 'Long engagements include a milestone review every eight weeks. Clarity is cheaper than rework — always.' },
+  { title: 'Security first.', text: 'Web3 stays on testnet until a security review is signed off. Real funds deserve real scrutiny.' },
+  { title: 'Tested on the right devices.', text: 'Every site is tested on a high-end setup, an average laptop, and a slow connection before launch. Speed and polish are non-negotiable.' },
+  { title: 'Green builds only.', text: 'Every release passes type-check, tests, and a production build. No exceptions — this is how confidence is built.' },
 ]
 
 const learning = [
@@ -80,11 +81,11 @@ export default function Engineering() {
   const { t } = useTranslation()
   usePageMeta({
     title: 'Engineering',
-    description: 'How I think about systems — the principles, decisions, and refusals behind everything I ship.',
+    description: 'How I think about systems — the principles, standards, and craft behind everything I ship.',
   })
   const heroRef = useReveal<HTMLDivElement>()
   const listRef = useReveal<HTMLDivElement>()
-  const refRef = useReveal<HTMLDivElement>()
+  const stdRef = useReveal<HTMLDivElement>()
   const learningRef = useReveal<HTMLDivElement>()
 
   return (
@@ -93,7 +94,7 @@ export default function Engineering() {
         <p className="kicker mb-6"><span className="kicker-dot" />How I build</p>
         <h1 className="page-title mb-8">Engineering</h1>
         <p className="font-sans text-lg md:text-xl text-ink-muted dark:text-ink-muted-dark leading-relaxed max-w-2xl">
-          Not a list of tools — a set of decisions. These are the principles I actually apply, and the rules I refuse to break. If you disagree with any of them, that is fine; this is the shape of a practice, not a religion.
+          Not a list of tools — a set of decisions. These are the principles I apply on every project, and the standards I hold myself to. If they match the way you build, we will work well together.
         </p>
       </div>
 
@@ -121,22 +122,25 @@ export default function Engineering() {
         ))}
       </div>
 
-      <section ref={refRef} className="reveal mb-24">
+      <section ref={stdRef} className="reveal mb-24">
         <div className="rule mb-8" />
-        <p className="eyebrow mb-10">What I refuse to do</p>
-        <ul className="space-y-5 max-w-3xl">
-          {refusals.map((r) => (
-            <li key={r.text} className="flex items-start gap-4 font-sans text-base md:text-lg text-ink-muted dark:text-ink-muted-dark">
-              <span className="mt-2.5 w-2 h-2 rounded-full bg-orange dark:bg-orange-dark flex-shrink-0" />
-              {r.text}
-            </li>
+        <p className="eyebrow mb-4">Standards</p>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold tracking-tight mb-10 max-w-2xl">
+          What every project gets, every time.
+        </h2>
+        <div className="grid gap-5 md:grid-cols-2">
+          {standards.map((s) => (
+            <div key={s.title} className="rounded-surface border border-line dark:border-line-dark bg-surface dark:bg-surface-dark p-6 md:p-8 transition-all duration-500 hover:-translate-y-1 hover:shadow-lg">
+              <h3 className="font-display text-lg md:text-xl font-semibold tracking-tight mb-3">{s.title}</h3>
+              <p className="font-sans text-sm md:text-base leading-relaxed text-ink-muted dark:text-ink-muted-dark">{s.text}</p>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       <section ref={learningRef} className="reveal mb-16">
         <div className="rule mb-8" />
-        <p className="eyebrow mb-10">Currently learning</p>
+        <p className="eyebrow mb-10">Currently deepening</p>
         <ul className="grid gap-4 md:grid-cols-2 max-w-4xl">
           {learning.map((l) => (
             <li key={l} className="rounded-surface border border-line dark:border-line-dark bg-surface dark:bg-surface-dark p-5 font-sans text-base text-ink dark:text-ink-dark">
