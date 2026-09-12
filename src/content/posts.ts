@@ -88,7 +88,7 @@ That is my whole framework. Nothing fancier than that.
     dateKey: 'post3_date',
     tagKey: 'post3_tag',
     readTimeKey: 'post3_readtime',
-    cover: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1600&q=80&auto=format&fit=crop',
+    cover: 'https://images.unsplash.com/photo-1588416936097-41850ab3d86d?w=1600&q=80&auto=format&fit=crop',
     coverCredit: 'Photo — Unsplash',
     body: `
 There is a version of software building taught in textbooks, and there is the version that happens when you are working from Accra with a client who has one laptop and patchy WiFi.
@@ -133,7 +133,7 @@ That is the whole manual.
     dateKey: 'post4_date',
     tagKey: 'post4_tag',
     readTimeKey: 'post4_readtime',
-    cover: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1600&q=80&auto=format&fit=crop',
+    cover: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80&auto=format&fit=crop',
     coverCredit: 'Photo — Unsplash',
     body: `
 Every few years a headline declares that PHP is dead. I keep building things with it that run for years without a single support ticket.
@@ -168,7 +168,7 @@ Boring ships. Fashionable argues.
     dateKey: 'post5_date',
     tagKey: 'post5_tag',
     readTimeKey: 'post5_readtime',
-    cover: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=1600&q=80&auto=format&fit=crop',
+    cover: 'https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=1600&q=80&auto=format&fit=crop',
     coverCredit: 'Photo — Unsplash',
     body: `
 There is a machine I keep in mind on every project I design. It is a five-year-old laptop, running a mid-range browser, on a 3G connection, in a room with the fan on.
