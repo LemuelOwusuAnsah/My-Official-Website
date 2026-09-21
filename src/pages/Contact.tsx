@@ -111,7 +111,7 @@ export default function Contact() {
                   name="name"
                   type="text"
                   required
-                  placeholder={t('contact_placeholder_name')}
+                  placeholder={t('contact_placeholder_name_new', 'your-name')}
                   className="w-full rounded-button border border-line dark:border-line-dark bg-surface dark:bg-surface-dark px-4 py-3 font-sans text-sm text-ink dark:text-ink-dark placeholder:text-ink-faint dark:placeholder:text-ink-faint-dark focus:border-lemon dark:focus:border-lemon-dark focus:outline-none focus:ring-2 focus:ring-lemon/30 dark:focus:ring-lemon-dark/30 transition-colors"
                 />
               </label>

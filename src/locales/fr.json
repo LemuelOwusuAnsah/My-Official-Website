@@ -725,5 +725,6 @@
   "proj_harlin_lang": "Full-stack · React",
   "projects_page_title": "Ce que j'ai livré.",
   "projects_page_intro": "Des produits réels, de vrais utilisateurs, d'Accra au monde. Chacun a commencé comme un problème qui valait la peine d'être résolu.",
-  "projects_visit": "Voir le projet"
+  "projects_visit": "Voir le projet",
+  "contact_placeholder_name_new": "votre-nom"
 }

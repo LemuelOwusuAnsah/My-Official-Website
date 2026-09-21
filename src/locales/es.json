@@ -725,5 +725,6 @@
   "proj_harlin_lang": "Full-stack · React",
   "projects_page_title": "Lo que he entregado.",
   "projects_page_intro": "Productos reales, usuarios reales, desde Accra al mundo. Cada uno comenzó como un problema que valía la pena resolver.",
-  "projects_visit": "Ver proyecto"
+  "projects_visit": "Ver proyecto",
+  "contact_placeholder_name_new": "tu-nombre"
 }

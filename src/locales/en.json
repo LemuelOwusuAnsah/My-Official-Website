@@ -678,5 +678,6 @@
   "proj_harlin_lang": "Full-stack · React",
   "projects_page_title": "Things I have shipped.",
   "projects_page_intro": "Live products, real users, from Accra to the world. Each one began as a problem worth solving.",
-  "projects_visit": "Visit project"
+  "projects_visit": "Visit project",
+  "contact_placeholder_name_new": "your-name"
 }
