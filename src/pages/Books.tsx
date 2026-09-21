@@ -9,8 +9,6 @@ const APPLE_BOOKS_URL = 'https://books.apple.com/gb/author/lemuel-owusu-ansah/id
 const books = [
   { titleKey: 'book1_title', yearKey: 'book1_year', descKey: 'book1_desc', tagKey: 'book1_tag', number: '01', bg: 'bg-[#fbbf24] dark:bg-[#b45309]', text: 'text-[#422006] dark:text-[#fef3c7]', muted: 'text-[#78350f] dark:text-[#fde68a]' },
   { titleKey: 'book2_title', yearKey: 'book2_year', descKey: 'book2_desc', tagKey: 'book2_tag', number: '02', bg: 'bg-[#fb923c] dark:bg-[#c2410c]', text: 'text-[#431407] dark:text-[#ffedd5]', muted: 'text-[#7c2d12] dark:text-[#fed7aa]' },
-  { titleKey: 'book3_title', yearKey: 'book3_year', descKey: 'book3_desc', tagKey: 'book3_tag', number: '03', bg: 'bg-[#bef264] dark:bg-[#4d7c0f]', text: 'text-[#1a2e05] dark:text-[#ecfccb]', muted: 'text-[#365314] dark:text-[#d9f99d]' },
-  { titleKey: 'book4_title', yearKey: 'book4_year', descKey: 'book4_desc', tagKey: 'book4_tag', number: '04', bg: 'bg-[#c4b5fd] dark:bg-[#6d28d9]', text: 'text-[#2e1065] dark:text-[#ede9fe]', muted: 'text-[#4c1d95] dark:text-[#ddd6fe]' },
 ]
 
 export default function Books() {

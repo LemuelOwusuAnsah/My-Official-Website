@@ -12,6 +12,7 @@ const navItems = [
   { to: '/books', key: 'nav_books', label: 'Books' },
   { to: '/projects', key: 'nav_projects', label: 'Projects' },
   { to: '/work', key: 'nav_work', label: 'Work' },
+  { to: '/music', key: 'nav_music', label: 'Music' },
   { to: '/blog', key: 'nav_blog', label: 'Blog' },
   { to: '/contact', key: 'nav_contact', label: 'Contact' },
 ]

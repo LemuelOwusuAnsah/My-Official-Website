@@ -6,6 +6,7 @@ import Skills from './pages/Skills'
 import Books from './pages/Books'
 import Projects from './pages/Projects'
 import Work from './pages/Work'
+import Music from './pages/Music'
 import CaseStudy from './pages/CaseStudy'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/apps" element={<Navigate to="/projects" replace />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/music" element={<Music />} />
         <Route path="/work/:slug" element={<CaseStudy />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
