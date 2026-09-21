@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import {
   Mail, MapPin, Phone, Clock, Send, CheckCircle2, AlertCircle, MessageCircle,
@@ -47,6 +47,13 @@ export default function Contact() {
   const asideRef = useReveal<HTMLDivElement>()
 
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+
+  useEffect(() => {
+    if (status === 'success' || status === 'error') {
+      const timer = setTimeout(() => setStatus('idle'), 6000)
+      return () => clearTimeout(timer)
+    }
+  }, [status])
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
