@@ -1,4 +1,3 @@
-import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import { usePageMeta } from '../hooks/usePageMeta'
@@ -6,7 +5,6 @@ import { useReveal } from '../hooks/useReveal'
 import { caseStudies } from '../content/caseStudies'
 
 export default function Work() {
-  const { t } = useTranslation()
   usePageMeta({
     title: 'Work',
     description: 'Deep dives into how specific projects were designed, built, and shipped.',
