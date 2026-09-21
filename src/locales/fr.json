@@ -708,5 +708,22 @@
   "tagline_role_1": "Développeur full-stack",
   "tagline_role_2": "Fondateur de Lans Multimedia",
   "tagline_role_3": "Auteur publié",
-  "tagline_role_4": "Producteur de musique — Lemy Newman"
+  "tagline_role_4": "Producteur de musique — Lemy Newman",
+  "proj_awuraba_name": "Awuraba Mart",
+  "proj_awuraba_desc": "Une boutique e-commerce en ligne pour une marque d'épicerie ghanéenne — catalogue produits, panier et tunnel de commande.",
+  "proj_awuraba_lang": "Full-stack · React · Node",
+  "proj_aku_name": "Aku Pay",
+  "proj_aku_desc": "Une interface de paiement numérique moderne — envoyer, recevoir et suivre les transactions avec une interface mobile-first épurée.",
+  "proj_aku_lang": "Frontend · JavaScript",
+  "proj_body_full_desc": "Un tracker IMC avec historique, graphiques de progression, objectifs et rappels hebdomadaires. Construit sans framework.",
+  "proj_wellness_full_desc": "La base frontend d'une clinique de santé intégrative — conçue pour devenir un portail patient complet.",
+  "proj_marylouis_name": "Marylouis Daycare",
+  "proj_marylouis_desc": "Un site chaleureux pour la crèche et l'école maternelle Marylouis à Heathrow — avec Lemy, un assistant conversationnel IA qui répond aux questions des parents.",
+  "proj_marylouis_lang": "Full-stack · React · IA",
+  "proj_harlin_name": "The Harlin Foundation LBG",
+  "proj_harlin_desc": "Le site public d'une fondation — mission, programmes, parcours de don et une voix éditoriale claire.",
+  "proj_harlin_lang": "Full-stack · React",
+  "projects_page_title": "Ce que j'ai livré.",
+  "projects_page_intro": "Des produits réels, de vrais utilisateurs, d'Accra au monde. Chacun a commencé comme un problème qui valait la peine d'être résolu.",
+  "projects_visit": "Voir le projet"
 }

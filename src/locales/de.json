@@ -708,5 +708,22 @@
   "tagline_role_2": "Gründer von Lans Multimedia",
   "tagline_role_3": "Veröffentlichter Autor",
   "tagline_role_4": "Musikproduzent — Lemy Newman",
-  "editorial_github": "github.com/LemuelOwusuAnsah"
+  "editorial_github": "github.com/LemuelOwusuAnsah",
+  "proj_awuraba_name": "Awuraba Mart",
+  "proj_awuraba_desc": "Ein Live-E-Commerce-Shop für eine ghanaische Lebensmittelmarke — Produktkatalog, Warenkorb und Checkout.",
+  "proj_awuraba_lang": "Full-Stack · React · Node",
+  "proj_aku_name": "Aku Pay",
+  "proj_aku_desc": "Eine moderne digitale Zahlungsoberfläche — senden, empfangen und Transaktionen verfolgen mit sauberer Mobile-First-UI.",
+  "proj_aku_lang": "Frontend · JavaScript",
+  "proj_body_full_desc": "Ein BMI-Tracker mit Verlauf, Fortschrittsdiagrammen, Zielsetzung und wöchentlichen Erinnerungen. Ohne Framework gebaut.",
+  "proj_wellness_full_desc": "Das Frontend-Fundament einer integrativen Gesundheitsklinik — gebaut, um zu einem vollständigen Patientenportal zu wachsen.",
+  "proj_marylouis_name": "Marylouis Daycare",
+  "proj_marylouis_desc": "Eine warme Website für die Marylouis Kindertagesstätte und Vorschule in Heathrow — mit Lemy, einem KI-Chat-Assistenten, der Elternfragen beantwortet.",
+  "proj_marylouis_lang": "Full-Stack · React · KI",
+  "proj_harlin_name": "The Harlin Foundation LBG",
+  "proj_harlin_desc": "Die öffentliche Website einer Stiftung — Mission, Programme, Spendenfluss und eine klare redaktionelle Stimme.",
+  "proj_harlin_lang": "Full-Stack · React",
+  "projects_page_title": "Was ich geliefert habe.",
+  "projects_page_intro": "Echte Produkte, echte Nutzer, von Accra in die Welt. Jedes begann als ein Problem, das es wert war, gelöst zu werden.",
+  "projects_visit": "Projekt ansehen"
 }

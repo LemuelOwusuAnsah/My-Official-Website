@@ -661,5 +661,22 @@
   "music_song_2_producer": "Jay Sam · ED Music Studios, Dansoman",
   "music_song_3_title": "It's Over",
   "music_song_3_year": "2024",
-  "music_song_3_producer": "Young Don · ED Music Studios"
+  "music_song_3_producer": "Young Don · ED Music Studios",
+  "proj_awuraba_name": "Awuraba Mart",
+  "proj_awuraba_desc": "A live e-commerce storefront for a Ghanaian grocery brand — product catalogue, cart, and checkout flow.",
+  "proj_awuraba_lang": "Full-stack · React · Node",
+  "proj_aku_name": "Aku Pay",
+  "proj_aku_desc": "A modern digital payments interface — send, receive, and track transactions with a clean, mobile-first UI.",
+  "proj_aku_lang": "Frontend · JavaScript",
+  "proj_body_full_desc": "A BMI tracker with history, progress charts, goal setting, and weekly reminders. Built without a framework.",
+  "proj_wellness_full_desc": "The frontend foundation for an integrative health clinic — built to grow into a full patient portal.",
+  "proj_marylouis_name": "Marylouis Daycare",
+  "proj_marylouis_desc": "A warm, welcoming website for Marylouis Daycare and Preschool in Heathrow — with Lemy, an AI chat assistant that answers parent questions.",
+  "proj_marylouis_lang": "Full-stack · React · AI",
+  "proj_harlin_name": "The Harlin Foundation LBG",
+  "proj_harlin_desc": "A public foundation website — mission, programmes, donation flow, and a clean editorial voice.",
+  "proj_harlin_lang": "Full-stack · React",
+  "projects_page_title": "Things I have shipped.",
+  "projects_page_intro": "Live products, real users, from Accra to the world. Each one began as a problem worth solving.",
+  "projects_visit": "Visit project"
 }
