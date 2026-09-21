@@ -14,7 +14,7 @@ import {
   AppleBooksIcon,
 } from '../components/BrandIcons'
 
-const FORM_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_YOUR_ID'
+const API_ENDPOINT = '/api/send-email'
 
 const directRows = [
   { labelKey: 'contact_email_label', value: 'hello@lemuelowusuansah.org', href: 'mailto:hello@lemuelowusuansah.org', Icon: Mail },
@@ -50,28 +50,24 @@ export default function Contact() {
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
-
-    if (FORM_ENDPOINT.includes('REPLACE_WITH_YOUR_ID')) {
-      const form = e.currentTarget
-      const data = new FormData(form)
-      const subject = encodeURIComponent(String(data.get('subject') || 'Hello from your site'))
-      const body = encodeURIComponent(
-        `Name: ${data.get('name')}\nEmail: ${data.get('email')}\n\n${data.get('message')}`
-      )
-      window.location.href = `mailto:hello@lemuelowusuansah.org?subject=${subject}&body=${body}`
-      return
-    }
+    const form = e.currentTarget
+    const data = new FormData(form)
 
     setStatus('sending')
     try {
-      const res = await fetch(FORM_ENDPOINT, {
+      const res = await fetch(API_ENDPOINT, {
         method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: new FormData(e.currentTarget),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.get('name'),
+          email: data.get('email'),
+          subject: data.get('subject'),
+          message: data.get('message'),
+        }),
       })
       if (res.ok) {
         setStatus('success')
-        e.currentTarget.reset()
+        form.reset()
       } else {
         setStatus('error')
       }
