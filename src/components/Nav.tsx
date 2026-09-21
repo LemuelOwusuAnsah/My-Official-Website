@@ -7,16 +7,12 @@ import { supportedLanguages } from '../i18n/config'
 
 const navItems = [
   { to: '/', key: 'nav_home', label: 'Home' },
-  { to: '/philosophy', key: 'nav_philosophy', label: 'Philosophy' },
-  { to: '/career', key: 'nav_career', label: 'Career' },
+  { to: '/about', key: 'nav_about', label: 'About Me' },
   { to: '/skills', key: 'nav_skills', label: 'Skills' },
-  { to: '/about', key: 'nav_about', label: 'About' },
+  { to: '/books', key: 'nav_books', label: 'Books' },
+  { to: '/projects', key: 'nav_projects', label: 'Projects' },
   { to: '/work', key: 'nav_work', label: 'Work' },
-  { to: '/engineering', key: 'nav_engineering', label: 'Engineering' },
-  { to: '/now', key: 'nav_now', label: 'Now' },
   { to: '/blog', key: 'nav_blog', label: 'Blog' },
-  { to: '/wallet', key: 'nav_wallet', label: 'Wallet' },
-  { to: '/contracts', key: 'nav_contracts', label: 'Contracts' },
   { to: '/contact', key: 'nav_contact', label: 'Contact' },
 ]
 
@@ -78,7 +74,6 @@ export default function Nav() {
             ))}
           </select>
 
-          {/* Mobile language badge — visible only on small screens, next to hamburger */}
           <span className="lg:hidden inline-flex items-center gap-1 px-2 py-1 rounded-button border border-line dark:border-line-dark font-mono text-2xs uppercase tracking-[0.1em] text-ink-muted dark:text-ink-muted-dark">
             <Globe size={11} />
             {i18n.language.toUpperCase()}

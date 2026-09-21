@@ -682,5 +682,7 @@
   "contact_email_alt_label": "Email (alt.)",
   "legal_privacy": "Confidentialité",
   "legal_terms": "Conditions",
-  "legal_cookies": "Cookies"
+  "legal_cookies": "Cookies",
+  "nav_books": "Livres",
+  "nav_projects": "Projets"
 }

@@ -681,5 +681,7 @@
   "contact_email_alt_label": "E-Mail (alt.)",
   "legal_privacy": "Datenschutz",
   "legal_terms": "AGB",
-  "legal_cookies": "Cookies"
+  "legal_cookies": "Cookies",
+  "nav_books": "Bücher",
+  "nav_projects": "Projekte"
 }

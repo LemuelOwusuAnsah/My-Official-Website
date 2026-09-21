@@ -639,5 +639,7 @@
   "contact_email_alt_label": "Email (alt)",
   "legal_privacy": "Privacy Policy",
   "legal_terms": "Terms & Conditions",
-  "legal_cookies": "Cookie Policy"
+  "legal_cookies": "Cookie Policy",
+  "nav_books": "Books",
+  "nav_projects": "Projects"
 }
