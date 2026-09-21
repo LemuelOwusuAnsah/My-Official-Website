@@ -66,19 +66,33 @@ export default function Music() {
         </div>
       </section>
 
-      <section ref={storyRef} className="reveal max-w-prose mx-auto mb-16">
+      <section ref={storyRef} className="reveal mb-16">
         <div className="rule mb-8" />
         <p className="eyebrow mb-10">{t('music_story_title')}</p>
 
-        <p className="font-sans text-base md:text-lg leading-relaxed text-ink-muted dark:text-ink-muted-dark mb-6">
-          {t('music_story_body_1')}
-        </p>
-        <p className="font-sans text-base md:text-lg leading-relaxed text-ink-muted dark:text-ink-muted-dark mb-6">
-          {t('music_story_body_2')}
-        </p>
-        <p className="font-sans text-base md:text-lg leading-relaxed text-ink-muted dark:text-ink-muted-dark mb-10">
-          {t('music_story_body_3')}
-        </p>
+        <div className="grid gap-8 md:gap-12 md:grid-cols-12 items-center mb-12">
+          <div className="md:col-span-5">
+            <div className="relative overflow-hidden rounded-surface aspect-[4/5]">
+              <img
+                src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&q=80&auto=format&fit=crop"
+                alt="Singer in headphones at a microphone in a recording studio"
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div className="md:col-span-7 max-w-prose">
+            <p className="font-sans text-base md:text-lg leading-relaxed text-ink-muted dark:text-ink-muted-dark mb-6">
+              {t('music_story_body_1')}
+            </p>
+            <p className="font-sans text-base md:text-lg leading-relaxed text-ink-muted dark:text-ink-muted-dark mb-6">
+              {t('music_story_body_2')}
+            </p>
+            <p className="font-sans text-base md:text-lg leading-relaxed text-ink-muted dark:text-ink-muted-dark">
+              {t('music_story_body_3')}
+            </p>
+          </div>
+        </div>
 
         <a href={APPLE_MUSIC_URL} target="_blank" rel="noopener noreferrer"
           className="group inline-flex items-center gap-2 link-arrow">
