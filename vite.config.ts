@@ -1,11 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// GitHub Pages serves from a subpath.
-// Detect at build time via env var, otherwise use '/' for Netlify.
-const base = process.env.GITHUB_PAGES === 'true'
-  ? '/My-Official-Website/'
-  : '/'
+// GitHub Pages serves project sites from /<repository>/. Netlify serves from /.
+const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'Me'
+const base = process.env.GITHUB_PAGES === 'true' ? `/${repositoryName}/` : '/'
 
 export default defineConfig({
   base,

@@ -64,13 +64,13 @@ export default function Hero() {
           >
             <div className="relative w-full">
               <img
-                src="/images/lemy-banner-desktop-light.webp"
+                src={`${import.meta.env.BASE_URL}images/lemy-banner-desktop-light.webp`}
                 alt="Lemuel Owusu-Ansah"
                 className="w-full h-auto block dark:hidden"
                 loading="eager"
               />
               <img
-                src="/images/lemy-banner-desktop-dark.webp"
+                src={`${import.meta.env.BASE_URL}images/lemy-banner-desktop-dark.webp`}
                 alt="Lemuel Owusu-Ansah"
                 className="w-full h-auto hidden dark:block"
                 loading="eager"

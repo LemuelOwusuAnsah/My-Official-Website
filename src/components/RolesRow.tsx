@@ -15,7 +15,7 @@ const roles = [
     key: 'founder', titleKey: 'founder_title', subKey: 'founder_sub', href: '/career',
     bg: 'bg-[#fb923c] dark:bg-[#c2410c]', text: 'text-[#431407] dark:text-[#ffedd5]',
     muted: 'text-[#7c2d12] dark:text-[#fed7aa]', ring: 'border-[#431407]/15 dark:border-[#ffedd5]/15',
-    icon: <img src="/favicon.svg" alt="Lans Multimedia" className="w-7 h-7" />,
+    icon: <img src={`${import.meta.env.BASE_URL}favicon.svg`} alt="Lans Multimedia" className="w-7 h-7" />,
   },
   {
     key: 'developer', titleKey: 'developer_title', subKey: 'developer_sub', href: '/skills',
