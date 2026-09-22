@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "postbuild": "node scripts/generate-social-pages.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",

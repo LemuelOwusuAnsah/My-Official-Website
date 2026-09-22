@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Link, useParams } from 'react-router-dom'
-import { ArrowLeft, Clock, ArrowUpRight, Link2, Check } from 'lucide-react'
-import { useState } from 'react'
+import { ArrowLeft, Clock, ArrowUpRight } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { useReveal } from '../hooks/useReveal'
@@ -9,6 +8,7 @@ import { usePageMeta } from '../hooks/usePageMeta'
 import { useBlogMeta } from '../hooks/useBlogMeta'
 import { getPost, getRelated } from '../content/posts'
 import HireForm from '../components/HireForm'
+import ShareButtons from '../components/ShareButtons'
 
 function formatDate(iso: string, locale: string) {
   return new Date(iso).toLocaleDateString(locale, {
@@ -24,7 +24,6 @@ export default function BlogPost() {
   const post = slug ? getPost(slug) : undefined
   const related = slug ? getRelated(slug, 3) : []
   const bodyRef = useReveal<HTMLDivElement>()
-  const [copied, setCopied] = useState(false)
 
   usePageMeta({
     title: post ? t(post.titleKey) : 'Post',
@@ -48,16 +47,6 @@ export default function BlogPost() {
         </Link>
       </div>
     )
-  }
-
-  async function copyLink() {
-    try {
-      await navigator.clipboard.writeText(window.location.href)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 1800)
-    } catch {
-      /* ignore */
-    }
   }
 
   return (
@@ -85,18 +74,10 @@ export default function BlogPost() {
           {t(post.excerptKey)}
         </p>
 
-        <div className="flex items-center justify-between flex-wrap gap-4 pb-8 border-b border-line dark:border-line-dark">
+        <div className="pb-8 border-b border-line dark:border-line-dark">
           <p className="font-mono text-2xs uppercase tracking-[0.14em] text-ink-faint dark:text-ink-faint-dark">
             {t('blog_author_note')}
           </p>
-
-          <button
-            onClick={copyLink}
-            className="inline-flex items-center gap-2 rounded-button border border-line dark:border-line-dark px-3 py-1.5 font-mono text-2xs uppercase tracking-[0.14em] text-ink-muted dark:text-ink-muted-dark hover:border-ink dark:hover:border-ink-dark hover:text-ink dark:hover:text-ink-dark transition-colors"
-          >
-            {copied ? <Check size={12} /> : <Link2 size={12} />}
-            {copied ? t('blog_link_copied') : t('blog_copy_link')}
-          </button>
         </div>
       </header>
 
@@ -178,6 +159,14 @@ export default function BlogPost() {
         >
           {post.body}
         </ReactMarkdown>
+      </div>
+
+      <div className="max-w-prose mx-auto">
+        <ShareButtons
+          url={typeof window !== 'undefined' ? window.location.href : ''}
+          title={t(post.titleKey)}
+          cover={post.cover}
+        />
       </div>
 
       {post.slug === 'management-systems' && (

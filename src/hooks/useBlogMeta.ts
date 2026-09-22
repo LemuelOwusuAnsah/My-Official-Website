@@ -25,7 +25,11 @@ export function useBlogMeta({
 }) {
   useEffect(() => {
     const url = `${SITE}/blog/${slug}`
-    const imageUrl = image.startsWith('http') ? image : `${SITE}${image}`
+    const imageUrl = image
+      ? image.startsWith('http')
+        ? image
+        : `${SITE}${image}`
+      : `${SITE}/images/lemy-banner-desktop-light.svg`
 
     setMeta('og:type', 'article')
     setMeta('og:url', url)
