@@ -6,7 +6,7 @@ import { AppleMusicIcon, AppleBooksIcon, GithubBrandIcon } from './BrandIcons'
 
 const roles = [
   {
-    key: 'author', titleKey: 'author_title', subKey: 'author_sub', href: '/work',
+    key: 'author', titleKey: 'author_title', subKey: 'author_sub', href: '/books',
     bg: 'bg-[#fbbf24] dark:bg-[#b45309]', text: 'text-[#422006] dark:text-[#fef3c7]',
     muted: 'text-[#78350f] dark:text-[#fde68a]', ring: 'border-[#422006]/15 dark:border-[#fef3c7]/15',
     icon: <AppleBooksIcon size={28} />,
@@ -24,7 +24,7 @@ const roles = [
     icon: <GithubBrandIcon size={28} />,
   },
   {
-    key: 'music', titleKey: 'music_title', subKey: 'music_sub', href: '/work',
+    key: 'music', titleKey: 'music_title', subKey: 'music_sub', href: '/music',
     bg: 'bg-[#c4b5fd] dark:bg-[#6d28d9]', text: 'text-[#2e1065] dark:text-[#ede9fe]',
     muted: 'text-[#4c1d95] dark:text-[#ddd6fe]', ring: 'border-[#2e1065]/15 dark:border-[#ede9fe]/15',
     icon: <AppleMusicIcon size={28} />,

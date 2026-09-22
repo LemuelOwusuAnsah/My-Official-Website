@@ -153,6 +153,48 @@ export const caseStudies: CaseStudy[] = [
       ],
     },
   },
+  {
+    slug: 'lans-multimedia',
+    title: 'Lans Multimedia',
+    tag: 'Technology & multimedia',
+    pitch: 'A Ghanaian technology and multimedia company providing digital solutions, creative production, and practical computer training.',
+    status: 'in-progress',
+    liveUrl: 'https://web.facebook.com/lansmultimedia',
+    stack: ['Web development', 'Mobile solutions', 'Multimedia production', 'Computer training'],
+    accent: {
+      bg: 'bg-[#fbbf24] dark:bg-[#b45309]',
+      text: 'text-[#422006] dark:text-[#fef3c7]',
+      muted: 'text-[#78350f] dark:text-[#fde68a]',
+      ring: 'border-[#422006]/15 dark:border-[#fef3c7]/15',
+    },
+    sections: [
+      {
+        heading: 'The company',
+        body: 'Lans Multimedia is the technology and multimedia company I founded to help people, organizations, and businesses make better use of digital tools. Its work brings together web and mobile solutions, multimedia production, technology support, and practical computer training.',
+      },
+      {
+        heading: 'What we do',
+        body: 'The company supports clients with websites and web applications, mobile-focused digital experiences, creative and multimedia production, IT guidance, and computer skills training. The aim is practical: make technology understandable, useful, and accessible to the people who need it.',
+      },
+      {
+        heading: 'Who it serves',
+        body: 'Lans Multimedia works with individuals, small businesses, organizations, learners, and teams that need a reliable technology partner. That includes people starting their digital journey, organizations improving their online presence, and clients who need training alongside a finished product.',
+      },
+      {
+        heading: 'Where we are now',
+        body: 'We are refurbishing a new premises and preparing to resume services fully. The online side of the company will be active again this week, with updates on available services, training, projects, and ways to work with us shared as the relaunch takes shape.',
+      },
+    ],
+    roadmap: {
+      heading: 'Services resuming this week',
+      items: [
+        'Online enquiries for web, mobile, and multimedia projects',
+        'Computer training and practical digital skills support',
+        'Technology guidance for individuals, businesses, and organizations',
+        'Updates on the refurbished Lans Multimedia premises and reopening plans',
+      ],
+    },
+  },
 ]
 
 export function getCaseStudy(slug: string): CaseStudy | undefined {
