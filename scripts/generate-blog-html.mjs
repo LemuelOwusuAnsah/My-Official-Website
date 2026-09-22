@@ -23,7 +23,7 @@ for (const [, slug, titleKey, excerptKey, cover] of matches) {
   const description = EN[excerptKey] ?? ''
   const image = absoluteUrl(cover)
   const url = `${SITE}/blog/${slug}`
-  const appPath = `/blog/${slug}`
+  
 
   const html = `<!doctype html>
 <html lang="en">
@@ -49,12 +49,12 @@ for (const [, slug, titleKey, excerptKey, cover] of matches) {
   <meta name="twitter:image" content="${image}" />
 </head>
 <body>
-  <p>Loading <a href="${appPath}">${esc(title)}</a>…</p>
+  <p>Loading <a href="/blog/${slug}">${esc(title)}</a>…</p>
   <script>
     // Only redirect humans, not social crawlers
     var ua = navigator.userAgent || '';
     if (!/bot|crawler|spider|facebook|whatsapp|twitter|linkedin|slack|discord|telegram/i.test(ua)) {
-      window.location.replace('${appPath}');
+      window.location.replace('/?p=blog-post&slug=${slug}');
     }
   </script>
 </body>
