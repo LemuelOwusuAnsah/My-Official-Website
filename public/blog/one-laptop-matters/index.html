@@ -20,11 +20,15 @@
   <meta name="twitter:title" content="Designing for the one laptop that matters" />
   <meta name="twitter:description" content="What changes when you build for real users instead of benchmarks — bandwidth, old devices, and the discipline it teaches." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1484788984921-03950022c9ef?w=1600&q=80&auto=format&fit=crop" />
-
-  <meta http-equiv="refresh" content="0; url=https://lemuelowusuansah.org/blog/one-laptop-matters" />
-  <script>window.location.replace('https://lemuelowusuansah.org/blog/one-laptop-matters')</script>
 </head>
 <body>
-  <p>Redirecting to <a href="https://lemuelowusuansah.org/blog/one-laptop-matters">Designing for the one laptop that matters</a>…</p>
+  <p>Loading <a href="/blog/one-laptop-matters">Designing for the one laptop that matters</a>…</p>
+  <script>
+    // Only redirect humans, not social crawlers
+    var ua = navigator.userAgent || '';
+    if (!/bot|crawler|spider|facebook|whatsapp|twitter|linkedin|slack|discord|telegram/i.test(ua)) {
+      window.location.replace('/blog/one-laptop-matters');
+    }
+  </script>
 </body>
 </html>

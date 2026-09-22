@@ -20,11 +20,15 @@
   <meta name="twitter:title" content="Why I moved from design to full-stack" />
   <meta name="twitter:description" content="The honest reason I stopped doing only design work and picked up PHP, MySQL, and server configuration." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1541462608143-67571c6738dd?w=1600&q=80&auto=format&fit=crop" />
-
-  <meta http-equiv="refresh" content="0; url=https://lemuelowusuansah.org/blog/design-to-fullstack" />
-  <script>window.location.replace('https://lemuelowusuansah.org/blog/design-to-fullstack')</script>
 </head>
 <body>
-  <p>Redirecting to <a href="https://lemuelowusuansah.org/blog/design-to-fullstack">Why I moved from design to full-stack</a>…</p>
+  <p>Loading <a href="/blog/design-to-fullstack">Why I moved from design to full-stack</a>…</p>
+  <script>
+    // Only redirect humans, not social crawlers
+    var ua = navigator.userAgent || '';
+    if (!/bot|crawler|spider|facebook|whatsapp|twitter|linkedin|slack|discord|telegram/i.test(ua)) {
+      window.location.replace('/blog/design-to-fullstack');
+    }
+  </script>
 </body>
 </html>

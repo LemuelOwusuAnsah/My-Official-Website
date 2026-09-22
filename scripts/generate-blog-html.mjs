@@ -6,7 +6,6 @@ const POSTS_FILE = 'src/content/posts.ts'
 const OUT_DIR = 'public/blog'
 const EN = JSON.parse(fs.readFileSync('src/locales/en.json', 'utf8'))
 
-// Parse posts from posts.ts (same regex as RSS generator)
 const src = fs.readFileSync(POSTS_FILE, 'utf8')
 const matches = [...src.matchAll(/slug:\s*'([^']+)'[\s\S]*?titleKey:\s*'([^']+)'[\s\S]*?excerptKey:\s*'([^']+)'[\s\S]*?cover:\s*'([^']+)'/g)]
 
@@ -24,6 +23,7 @@ for (const [, slug, titleKey, excerptKey, cover] of matches) {
   const description = EN[excerptKey] ?? ''
   const image = absoluteUrl(cover)
   const url = `${SITE}/blog/${slug}`
+  const appPath = `/blog/${slug}`
 
   const html = `<!doctype html>
 <html lang="en">
@@ -47,12 +47,16 @@ for (const [, slug, titleKey, excerptKey, cover] of matches) {
   <meta name="twitter:title" content="${esc(title)}" />
   <meta name="twitter:description" content="${esc(description)}" />
   <meta name="twitter:image" content="${image}" />
-
-  <meta http-equiv="refresh" content="0; url=${url}" />
-  <script>window.location.replace('${url}')</script>
 </head>
 <body>
-  <p>Redirecting to <a href="${url}">${esc(title)}</a>…</p>
+  <p>Loading <a href="${appPath}">${esc(title)}</a>…</p>
+  <script>
+    // Only redirect humans, not social crawlers
+    var ua = navigator.userAgent || '';
+    if (!/bot|crawler|spider|facebook|whatsapp|twitter|linkedin|slack|discord|telegram/i.test(ua)) {
+      window.location.replace('${appPath}');
+    }
+  </script>
 </body>
 </html>`
 
@@ -62,4 +66,4 @@ for (const [, slug, titleKey, excerptKey, cover] of matches) {
   count++
 }
 
-console.log(`✓ Generated ${count} blog post HTML files in ${OUT_DIR}/`)
+console.log(`✓ Generated ${count} blog post HTML files`)
