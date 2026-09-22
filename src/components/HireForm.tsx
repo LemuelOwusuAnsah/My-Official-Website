@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { useTranslation } from 'react-i18next'
 import { Send, CheckCircle2, AlertCircle } from 'lucide-react'
 
 const ROLES = [
@@ -18,7 +17,6 @@ const ROLES = [
 ]
 
 export default function HireForm() {
-  const { t } = useTranslation()
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
