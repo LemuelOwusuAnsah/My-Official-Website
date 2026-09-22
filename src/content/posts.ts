@@ -18,7 +18,7 @@ export const posts: Post[] = [
     dateKey: 'post_mgmt_date',
     tagKey: 'post_mgmt_tag',
     readTimeKey: 'post_mgmt_readtime',
-    cover: '/blog-covers/blog-mgmt-systems-cover.png',
+    cover: `${import.meta.env.BASE_URL}blog-covers/blog-mgmt-systems-cover.png`,
     coverCredit: 'Artwork — Lans Multimedia',
     body: `## The silent trap of growing without a system
 
