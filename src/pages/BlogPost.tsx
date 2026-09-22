@@ -6,7 +6,9 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { useReveal } from '../hooks/useReveal'
 import { usePageMeta } from '../hooks/usePageMeta'
+import { useBlogMeta } from '../hooks/useBlogMeta'
 import { getPost, getRelated } from '../content/posts'
+import HireForm from '../components/HireForm'
 
 function formatDate(iso: string, locale: string) {
   return new Date(iso).toLocaleDateString(locale, {
@@ -27,7 +29,13 @@ export default function BlogPost() {
   usePageMeta({
     title: post ? t(post.titleKey) : 'Post',
     description: post ? t(post.excerptKey) : undefined,
-    image: post?.cover,
+  })
+
+  useBlogMeta({
+    title: post ? t(post.titleKey) : 'Post',
+    description: post ? t(post.excerptKey) : '',
+    image: post?.cover ?? '',
+    slug: slug ?? '',
   })
 
   if (!post) {
@@ -101,19 +109,24 @@ export default function BlogPost() {
         </figcaption>
       </figure>
 
-      <div ref={bodyRef} className="reveal max-w-prose mx-auto">
+      <div ref={bodyRef} className="max-w-prose mx-auto">
         <ReactMarkdown
           remarkPlugins={[remarkGfm]}
           components={{
             h2: ({ children }) => (
-              <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight mt-14 mb-5">
+              <h2 className="font-display text-2xl md:text-3xl font-semibold tracking-tight text-ink dark:text-ink-dark mt-14 mb-5">
                 {children}
               </h2>
             ),
             h3: ({ children }) => (
-              <h3 className="font-display text-xl md:text-2xl font-semibold tracking-tight mt-10 mb-4">
+              <h3 className="font-display text-xl md:text-2xl font-semibold tracking-tight text-ink dark:text-ink-dark mt-10 mb-4">
                 {children}
               </h3>
+            ),
+            h4: ({ children }) => (
+              <h4 className="font-display text-lg font-semibold tracking-tight text-ink dark:text-ink-dark mt-8 mb-3">
+                {children}
+              </h4>
             ),
             p: ({ children }) => (
               <p className="font-sans text-base md:text-lg leading-relaxed text-ink dark:text-ink-dark mb-6">
@@ -123,8 +136,14 @@ export default function BlogPost() {
             strong: ({ children }) => (
               <strong className="font-semibold text-ink dark:text-ink-dark">{children}</strong>
             ),
+            em: ({ children }) => (
+              <em className="italic text-ink-muted dark:text-ink-muted-dark">{children}</em>
+            ),
             ul: ({ children }) => (
               <ul className="list-none space-y-3 my-6 pl-0">{children}</ul>
+            ),
+            ol: ({ children }) => (
+              <ol className="list-decimal space-y-3 my-6 pl-6 text-ink dark:text-ink-dark">{children}</ol>
             ),
             li: ({ children }) => (
               <li className="font-sans text-base md:text-lg leading-relaxed text-ink dark:text-ink-dark pl-6 relative before:content-[''] before:absolute before:left-0 before:top-3 before:w-2 before:h-2 before:rounded-full before:bg-lemon dark:before:bg-lemon-dark">
@@ -148,15 +167,24 @@ export default function BlogPost() {
               </a>
             ),
             code: ({ children }) => (
-              <code className="font-mono text-sm bg-surface-muted dark:bg-surface-muted-dark px-1.5 py-0.5 rounded">
+              <code className="font-mono text-sm bg-surface-muted dark:bg-surface-muted-dark px-1.5 py-0.5 rounded text-ink dark:text-ink-dark">
                 {children}
               </code>
+            ),
+            hr: () => (
+              <hr className="border-line dark:border-line-dark my-12" />
             ),
           }}
         >
           {post.body}
         </ReactMarkdown>
       </div>
+
+      {post.slug === 'management-systems' && (
+        <div className="max-w-prose mx-auto mt-16">
+          <HireForm />
+        </div>
+      )}
 
       {related.length > 0 && (
         <section className="max-w-6xl mx-auto mt-24">
